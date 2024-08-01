@@ -24,9 +24,11 @@ kubectl -n gitops get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 kubectl port-forward svc/argocd-server -n gitops 8080:443
 kubectl get svc argocd-server -n gitops
 
-# Update the password and enable use argo in your terminal
-argocd login "localhost:8080" --username admin --password "o06fvssW6u09uHwD" --insecure
+# Update the password and enable use argo in your terminal (password is the second command from the list on the top)
+argocd login "localhost:8080" --username admin --password "k61K2GmlqwAZBGfN" --insecure
 kubectx
+
+# Generate the token to be added in the secret
 kubectl config view --context ice-inno --minify --flatten -o json | base64 -w 0
 echo -n "ice-inno" | base64 # update the name
 kubectl apply -f secret.yaml # don't forget to update the secret.yaml with the base64 output, on fields name and config respectively
