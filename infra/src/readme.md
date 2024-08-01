@@ -1,5 +1,7 @@
 # Manifests Deployment
 
+Remember to always update the destination (cluster name) information in the yaml files.
+
 ### helm repo
 ```sh
 helm repo add apache-airflow https://airflow.apache.org
