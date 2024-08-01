@@ -42,7 +42,7 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 minikube config set nodes 3
 
 # Start Minikube with the 3-node configuration
-minikube start
+minikube start -p ice-inno --nodes=3
 ```
 
 2) [GitOps](infra/terraform/gitops/argocd/readme.md)

@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/Frndo1203/stack_iceberg_starrocks_k8s.git'
+    repoURL: 'https://github.com/Luis20matias/stack_iceberg_starrocks_k8s.git'
     path: infra/src/helm-charts/minio-tenant
     targetRevision: HEAD
     helm:
