@@ -13,7 +13,7 @@ spec:
       valueFiles:
       - values.yaml
   destination:
-    name: 'starrocks-mds-dev'
+    name: 'ice-inno' # cluster name
     namespace: deepstorage
     server: ''
   syncPolicy:
