@@ -42,7 +42,7 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 minikube config set nodes 3
 
 # Start Minikube with the 3-node configuration
-minikube start -p ice-inno --nodes=3
+minikube start -p ice-inno --nodes=3 --cpus=4 --memory=4000
 ```
 
 Update the config file in the .kube to avoid issues: https://192.168.49.2:8443
