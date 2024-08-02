@@ -78,7 +78,7 @@ airflowVersion: "2.8.1"
 # Images
 images:
   airflow:
-    repository: starrocks-mds/starrocks-mds-apache-airflow
+    repository: owshq/owshq-apache-airflow
     tag: 2.8.1
     # repository: ~
     # tag: ~ 
