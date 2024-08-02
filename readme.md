@@ -45,6 +45,9 @@ minikube config set nodes 3
 minikube start -p ice-inno --nodes=3
 ```
 
+Update the config file in the .kube to avoid issues: https://192.168.49.2:8443
+
+
 2) [GitOps](infra/terraform/gitops/argocd/readme.md)
 3) [Deployment](infra/src/readme.md)
 
