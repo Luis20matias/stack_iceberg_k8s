@@ -58,14 +58,14 @@ tenant:
     resources: {}
     ## Configure security context
     securityContext:
-      runAsUser: 1000
-      runAsGroup: 1000
+      runAsUser: 0
+      runAsGroup: 0
       fsGroup: 1000
-      runAsNonRoot: true
+      runAsNonRoot: false
     ## Configure container security context
     containerSecurityContext:
-      runAsUser: 1000
-      runAsGroup: 1000
+      runAsUser: 0
+      runAsGroup: 0
       runAsNonRoot: true
     ## Configure topology constraints
     topologySpreadConstraints: []
