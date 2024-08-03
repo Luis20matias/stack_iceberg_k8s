@@ -39,7 +39,7 @@ tenant:
       ## size specifies the capacity per volume
       size: 500Mi
       ## storageClass specifies the storage class name to be used for this pool
-      storageClassName: standard
+      storageClassName: csi-hostpath-sc
       ## Used to specify annotations for pods
       annotations: { }
       ## Used to specify labels for pods
