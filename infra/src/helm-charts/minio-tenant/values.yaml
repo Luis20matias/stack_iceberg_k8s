@@ -57,10 +57,10 @@ tenant:
       ## Configure resource requests and limits for MinIO containers
       resources: 
         requests:
-          memory: "1Gi"
+          memory: "500Mi"
           cpu: "500m"
         limits:
-          memory: "2Gi"
+          memory: "1Gi"
           cpu: "1"
       ## Configure security context
       securityContext:
