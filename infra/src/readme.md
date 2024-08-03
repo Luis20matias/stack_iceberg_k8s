@@ -13,7 +13,6 @@ helm repo update
 ```shell
 kubectl apply -f app-manifests/deepstorage/minio-operator.yaml
 kubectl apply -f app-manifests/deepstorage/minio-tenant.yaml
-kubectl apply -f app-manifests/deepstorage/pv.yaml
 ```
 
 ### hive metastore [metastore]

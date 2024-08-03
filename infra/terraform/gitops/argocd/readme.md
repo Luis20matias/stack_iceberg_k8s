@@ -25,7 +25,7 @@ kubectl port-forward svc/argocd-server -n gitops 8080:443
 kubectl get svc argocd-server -n gitops
 
 # Update the password and enable use argo in your terminal (password is the second command from the list on the top)
-argocd login "localhost:8080" --username admin --password "Piyvt14c6uvJ6Dre" --insecure
+argocd login "localhost:8080" --username admin --password "oW8uw74juj6NC0CG" --insecure
 kubectx
 
 # Generate the token to be added in the secret
