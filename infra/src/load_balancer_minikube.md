@@ -52,7 +52,13 @@ kubectl apply -f minio-service.yaml
 Run Minikube Tunnel:
 
 ```bash
-minikube tunnel
+minikube tunnel -p ice-inno
+```
+
+Run the following commands to make the pvc fine locally (remmeber to update it in your values.yaml):
+
+```bash
+minikube addons enable csi-hostpath-driver
 ```
 
 By following these steps, you should be able to access your Minio service without encountering the connection refused error.
