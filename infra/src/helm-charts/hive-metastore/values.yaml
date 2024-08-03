@@ -9,6 +9,9 @@ mariadb:
     database: metastore
     rootPassword: root
     password: root
+  persistence:
+    storageClass: csi-hostpath-sc
+    size: 500Mi
 
 replicas: 1
 resources: {}

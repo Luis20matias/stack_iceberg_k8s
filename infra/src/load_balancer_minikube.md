@@ -61,6 +61,10 @@ Run the following commands to make the pvc fine locally (remmeber to update it i
 minikube addons enable csi-hostpath-driver
 ```
 
+Remamber to update the storageClass on the values.yaml files: 
+
+storageClass: csi-hostpath-sc
+
 By following these steps, you should be able to access your Minio service without encountering the connection refused error.
 
 Link describing how to enable ingress: https://dev.to/olgabraginskaya/unleash-your-pipeline-creativity-local-development-with-argo-workflows-and-minio-on-minikube-2764
