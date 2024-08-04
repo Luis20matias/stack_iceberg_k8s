@@ -14,13 +14,16 @@ helm repo add argo https://argoproj.github.io/argo-helm
 ## Start Minikube
 
 ```sh
-minikube start -p ice-inno --nodes=3
+minikube start -p ice-inno --nodes=3 --cpus=4 --memory=4000
 ```
 
 Run the following commands to make the pvc fine locally (remmeber to update it in your values.yaml):
 
 ```bash
 minikube addons enable csi-hostpath-driver -p ice-inno
+minikube addons enable ingress -p ice-inno
+minikube addons enable ingress-dns -p ice-inno
+minikube addons enable metrics-server -p ice-inno
 ```
 
 Allow Loadbalancer
