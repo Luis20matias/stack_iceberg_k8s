@@ -22,6 +22,10 @@ k get svc
 ```
 
 Access datalake-console <External-ip>:port
+  username: data-lake
+
+  password: 12620ee6-2162-11ee-be56-0242ac120002
+
   - name: landing
   - name: metastore
   - name: trino
