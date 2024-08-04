@@ -47,6 +47,12 @@ minikube start -p ice-inno --nodes=3 --cpus=4 --memory=4000
 
 Update the config file in the .kube to avoid issues: https://192.168.49.2:8443
 
+Run
+```bash
+kubectl config use-context ice-inno 
+```
+
+
 
 2) [GitOps](infra/terraform/gitops/argocd/readme.md)
 3) [Deployment](infra/src/readme.md)
