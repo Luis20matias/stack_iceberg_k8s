@@ -21,7 +21,7 @@ kubectl apply -f app-manifests/deepstorage/minio-tenant.yaml
 k get svc
 ```
 
-Access <External-ip>:port
+Access datalake-console <External-ip>:port
   - name: landing
   - name: metastore
   - name: trino
