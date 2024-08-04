@@ -21,6 +21,7 @@ Run the following commands to make the pvc fine locally (remmeber to update it i
 
 ```bash
 minikube addons enable csi-hostpath-driver -p ice-inno
+minikube addons enable volumesnapshots -p ice-inno
 minikube addons enable ingress -p ice-inno
 minikube addons enable ingress-dns -p ice-inno
 minikube addons enable metrics-server -p ice-inno
