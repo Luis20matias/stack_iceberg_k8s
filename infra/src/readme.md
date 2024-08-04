@@ -31,6 +31,14 @@ Access datalake-console <External-ip>:port
   - name: metastore
   - name: trino
 
+These steps will change the default storage class for your Minikube cluster. Now, any new PVCs created without specifying a storage class will use csi-hostpath-sc by default.
+
+Here's how you can do it in a single command:
+```shell
+kubectl annotate storageclass standard storageclass.kubernetes.io/is-default-class- && kubectl annotate storageclass csi-hostpath-sc storageclass.kubernetes.io/is-default-class=true
+```
+
+
 ### hive metastore [metastore]
 ```shell
 kubectl apply -f app-manifests/metastore/hive-metastore.yaml
