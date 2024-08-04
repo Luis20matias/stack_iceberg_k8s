@@ -27,11 +27,6 @@ minikube addons enable ingress-dns -p ice-inno
 minikube addons enable metrics-server -p ice-inno
 ```
 
-Allow Loadbalancer
-```bash
-minikube tunnel -p ice-inno
-```
-
 ### build
 ```sh
 terraform init
@@ -43,16 +38,21 @@ terraform apply
 kubectl patch svc argocd-server -n gitops -p '{"spec": {"type": "LoadBalancer"}}'
 kubectl -n gitops get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
 kubectl port-forward svc/argocd-server -n gitops 8080:443
-kubectl get svc argocd-server -n gitops
 
 # Update the password and enable use argo in your terminal (password is the second command from the list on the top)
-argocd login "localhost:8080" --username admin --password "a6UaU5I1f5uvMNV6" --insecure
+argocd login "localhost:8080" --username admin --password "afElsutmZYEvo75R" --insecure
 
 # Create argo cluster
 argocd cluster add "ice-inno"
 
 # Connect with Github
 kubectl apply -f git-repo-con.yaml -n gitops
+
+
+Allow Loadbalancer
+```bash
+minikube tunnel -p ice-inno
+```
 
 # Optional Commands to create the cluster
 Generate the token to be added in the secret
