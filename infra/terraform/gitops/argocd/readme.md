@@ -40,7 +40,7 @@ kubectl -n gitops get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 kubectl port-forward svc/argocd-server -n gitops 8080:443
 
 # Update the password and enable use argo in your terminal (password is the second command from the list on the top)
-argocd login "localhost:8080" --username admin --password "afElsutmZYEvo75R" --insecure
+argocd login "localhost:8080" --username admin --password "ufeGCuyoNNTSYTQQ" --insecure
 
 # Create argo cluster
 argocd cluster add "ice-inno"

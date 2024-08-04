@@ -18,6 +18,7 @@ kubectl apply -f app-manifests/deepstorage/minio-tenant.yaml
 # Create the buckets manually 
 
 ```shell
+kubens deepstorage
 k get svc
 ```
 
