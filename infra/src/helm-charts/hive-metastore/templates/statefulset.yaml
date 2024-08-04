@@ -36,6 +36,11 @@ spec:
         #   value: /opt/hadoop-2.7.4/share/hadoop/tools/lib/*
         resources:
 {{ toYaml .Values.resources | indent 10 }}
+        volumeMounts:
+        - name: hive-config
+          mountPath: /opt/apache-hive-metastore-3.0.0-bin/conf
+        - name: mariadb-persistent-storage
+          mountPath: /var/lib/mysql
         # readinessProbe:
         #   httpGet:
         #     path: /
@@ -48,10 +53,17 @@ spec:
         #     port: 16010
         #   initialDelaySeconds: 10
         #   timeoutSeconds: 2
-        volumeMounts:
-        - name: hive-config
-          mountPath: /opt/apache-hive-metastore-3.0.0-bin/conf
       volumes:
       - name: hive-config
         configMap:
           name: {{ include "hiveMetastore.fullname" . }}
+  volumeClaimTemplates:
+  - metadata:
+      name: mariadb-persistent-storage
+      annotations:
+        volume.beta.kubernetes.io/storage-class: "{{ .Values.mariadb.persistence.storageClass }}"
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: "{{ .Values.mariadb.persistence.size }}"
