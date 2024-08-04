@@ -15,6 +15,11 @@ kubectl apply -f app-manifests/deepstorage/minio-operator.yaml
 kubectl apply -f app-manifests/deepstorage/minio-tenant.yaml
 ```
 
+# Create the buckets manually 
+  - name: landing
+  - name: metastore
+  - name: trino
+
 ### hive metastore [metastore]
 ```shell
 kubectl apply -f app-manifests/metastore/hive-metastore.yaml
